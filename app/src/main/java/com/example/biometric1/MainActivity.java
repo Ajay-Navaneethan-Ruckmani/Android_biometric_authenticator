@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void buttonAuthenticate(View view){
         BiometricManager biometricManager = BiometricManager.from(this);
         if( BiometricManager.BIOMETRIC_SUCCESS == 1){ //checks if biometric is present
-            textView.setText(("Biometric not supported"));
+            textView.setText(("Biometric is supported. Please wait for authentication"));
             return;
         }
         biometricPrompt.authenticate(promptInfo);
